@@ -5,7 +5,7 @@ export type CounterPropsType = {
     number: number
     incDisabled: boolean
     resDisabled: boolean
-    limitedValue: number
+    /*limitedValue: number*/
     startValue: number
     maxValue: number
     showNumber: boolean
@@ -21,7 +21,7 @@ export const Counter = (props: CounterPropsType) => {
 
     const textForCounter = props.maxValue === props.startValue || props.maxValue < 0 || props.startValue < 0 || props.startValue > props.maxValue ? 'error' : 'enter your settings'
 
-    const numberClass = props.limitedValue === props.number || props.maxValue === props.startValue || props.maxValue < 0 || props.startValue < 0 || props.startValue > props.maxValue ? 'count red' : 'count'
+    const numberClass = props.maxValue === props.number || props.maxValue === props.startValue || props.maxValue < 0 || props.startValue < 0 || props.startValue > props.maxValue ? 'count red' : 'count'
 
     return (
         <div className='counter'>
